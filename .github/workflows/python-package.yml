@@ -40,7 +40,7 @@ jobs:
         poetry run isort . --check
     - name: autoflake!
       run:
-        poetry run autoflake -r --check --remove-all-unused-imoprts --ignore-init-module-imports --remove-unused-variables .
+        poetry run autoflake -r --check --remove-all-unused-imports --ignore-init-module-imports --remove-unused-variables .
     - name: Test with pytest
       run: |
         pytest
