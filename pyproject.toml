@@ -15,6 +15,7 @@ matplotlib = "^3.3.4"
 seaborn = "^0.11.1"
 scikit-learn = "^0.24.1"
 PyYAML = "^5.4.1"
+pre-commit = "^2.10.1"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
@@ -32,7 +33,42 @@ seaborn = "^0.11.1"
 jupyterlab = "^3.0.7"
 scikit-learn = "^0.24.1"
 PyYAML = "^5.4.1"
+pre-commit = "^2.10.1"
+jupyterlab-code-formatter = "^1.4.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+force_single_line = true
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+src_paths = ["poetry", "tests"]
+skip_glob = ["*/setup.py"]
+filter_files = true
+known_first_party = "poetry"
+
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | tests/.*/setup.py
+)/
+'''
