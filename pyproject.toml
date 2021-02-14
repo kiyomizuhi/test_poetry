@@ -16,6 +16,7 @@ seaborn = "^0.11.1"
 scikit-learn = "^0.24.1"
 PyYAML = "^5.4.1"
 pre-commit = "^2.10.1"
+click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
@@ -35,6 +36,7 @@ scikit-learn = "^0.24.1"
 PyYAML = "^5.4.1"
 pre-commit = "^2.10.1"
 jupyterlab-code-formatter = "^1.4.4"
+click = "^7.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
