@@ -43,4 +43,4 @@ jobs:
         poetry run autoflake -r --check --remove-all-unused-imports --ignore-init-module-imports --remove-unused-variables .
     - name: Test with pytest
       run: |
-        pytest
+        poetry run pytest
